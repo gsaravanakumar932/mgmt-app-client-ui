@@ -1,0 +1,10 @@
+<mat-toolbar class="header">
+    <span>Blog App</span>
+    <span class="spacer"></span>
+
+    @if(authService.isAuthenticated()) {
+    <button mat-flat-button class="example-icon" aria-label="Example icon-button with login icon" (click)="logout()">
+        <mat-icon>input</mat-icon>Logout
+    </button>
+    }
+</mat-toolbar>
