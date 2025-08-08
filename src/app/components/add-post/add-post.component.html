@@ -23,6 +23,14 @@
                 <mat-error>Description Required</mat-error>
               }
         </mat-form-field>
+
+         <mat-form-field>
+            <mat-label>File Upload</mat-label>
+            <input type="file" formControlName="fileUpload" matInputFile class="file-upload" onchange="console.log(event.target.files)">
+            @if (getControl('description').invalid) {
+            <mat-error>Description Required</mat-error>
+            }
+        </mat-form-field>
     </div>
 </mat-dialog-content>
 <mat-dialog-actions>
